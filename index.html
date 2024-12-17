@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:wght@700&family=Young+Serif&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --Dark-cyan: hsl(158, 36%, 37%);
+      --Cream: hsl(30, 38%, 92%);
+      --Very-dark-blue: hsl(212, 21%, 14%);
+      --Dark-grayish-blue: hsl(228, 12%, 48%);
+      --White: hsl(0, 0%, 100%);
+    }
+
+    html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      display: flex;
+      width: 1440px;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--Cream);
+    } 
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 600px;
+      height: 450px;
+      font-family: Montserrat;
+      box-sizing: border-box;
+      background-color: var(--White);
+      border-radius: 10px;
+    }
+
+    .right-card img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: fill;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .left-card {
+      padding: 0 32px;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--Dark-grayish-blue);
+      margin-top: 32px;
+    }
+
+    h1 {
+      font-family: Fraunces;
+      font-size: 32px;
+      color: var(--Very-dark-blue);
+    }
+
+    p.price {
+      font-family: Fraunces;
+      font-size: 32px;
+      color: var(--Dark-cyan);
+    }
+
+    span {
+      position: relative;
+      text-decoration: line-through;
+      left: 10%;
+      font-size: 13px;
+      color: var(--Dark-grayish-blue);
+    }
+
+    button {
+      width: 236px;
+      height: 48px;
+      background-color: var(--Dark-cyan);
+      font-size: 14px;
+      color: var(--White);
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="right-card">
+      <img src="./images/image-product-desktop.jpg" alt="">
+    </div>
+    <div class="left-card">
+      <p>PERFUME</p>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p class="detail">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+      <p class="price">$149.99 <span>$169.99</span></p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</body>
+</html>
