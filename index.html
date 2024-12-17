@@ -21,6 +21,7 @@
 
     html {
       display: flex;
+      height: 100%;
       justify-content: center;
       align-items: center;
     }
@@ -40,7 +41,6 @@
       width: 600px;
       height: 450px;
       font-family: Montserrat;
-      box-sizing: border-box;
       background-color: var(--White);
       border-radius: 10px;
     }
@@ -48,32 +48,44 @@
     .right-card img {
       max-width: 100%;
       max-height: 100%;
-      object-fit: fill;
+      object-fit: cover;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
     }
 
     .left-card {
       padding: 0 32px;
+      box-sizing: border-box;
     }
 
     p {
       font-size: 12px;
       font-weight: 500;
       color: var(--Dark-grayish-blue);
+    }
+
+    p.title {
+      letter-spacing: 4px;
       margin-top: 32px;
+    }
+
+    p.price {
+      display: flex;
+      align-items: center;
+      font-family: Fraunces;
+      font-size: 32px;
+      color: var(--Dark-cyan);
+    }
+
+    p.detail {
+      line-height: 1.4;
+      font-size: 14px;
     }
 
     h1 {
       font-family: Fraunces;
       font-size: 32px;
       color: var(--Very-dark-blue);
-    }
-
-    p.price {
-      font-family: Fraunces;
-      font-size: 32px;
-      color: var(--Dark-cyan);
     }
 
     span {
@@ -85,6 +97,9 @@
     }
 
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 236px;
       height: 48px;
       background-color: var(--Dark-cyan);
@@ -94,6 +109,40 @@
       border: none;
       border-radius: 10px;
     }
+
+    button img {
+      padding-right: 5px;
+    }
+
+    @media (max-width: 640px) {
+    .card {
+      display: grid;
+      width: 95vw;
+      height: 95vh;
+      box-sizing: border-box;
+      grid-template-columns: 1fr;
+      grid-template-rows: 240px auto; /* Changed to auto for dynamic content height */
+      margin: 20px auto;
+    }
+    
+    .right-card img {
+      width: 100%;
+      height: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    p {
+      margin-top: 16px;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -102,12 +151,12 @@
       <img src="./images/image-product-desktop.jpg" alt="">
     </div>
     <div class="left-card">
-      <p>PERFUME</p>
+      <p class="title">PERFUME</p>
       <h1>Gabrielle Essence Eau De Parfum</h1>
       <p class="detail">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.</p>
       <p class="price">$149.99 <span>$169.99</span></p>
-      <button>Add to Cart</button>
+      <button><img src="./images/icon-cart.svg" alt=""> Add to Cart</button>
     </div>
   </div>
 </body>
